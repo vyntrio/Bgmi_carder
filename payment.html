@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0a192f;
+            color: #e6f1ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .banner {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #112240;
+            width: 100%;
+        }
+        .banner img {
+            max-width: 100%;
+            height: auto;
+        }
+        .payment-container {
+            background-color: #112240;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 500px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        .payment-title {
+            color: #3b82f6;
+            margin-bottom: 20px;
+        }
+        .qr-code {
+            width: 100%;
+            max-width: 300px;
+            margin: 20px auto;
+            border: 2px solid #3b82f6;
+            border-radius: 5px;
+        }
+        .instructions {
+            margin: 20px 0;
+            text-align: left;
+            line-height: 1.6;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #3b82f6;
+            background-color: #0a192f;
+            color: white;
+            font-size: 16px;
+        }
+        .submit-btn {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .submit-btn:hover {
+            background-color: #2563eb;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <img src="https://i.postimg.cc/6QhgC3kb/image-search-1752245026702.png" alt="Store Banner">
+    </div>
+
+    <div class="payment-container">
+        <h2 class="payment-title">MAKE PAYMENT</h2>
+        <img src="https://i.postimg.cc/vHBLmwDW/IMG-20250713-120319.jpg" alt="Payment QR Code" class="qr-code">
+        
+        <div class="instructions">
+            <p><strong>Payment Instructions:</strong></p>
+            <ol>
+                <li>Scan the QR code using any UPI payment app</li>
+                <li>Enter the exact amount for your purchase</li>
+                <li>Complete the payment</li>
+                <li>Enter your UTR/Transaction ID below</li>
+            </ol>
+        </div>
+        
+        <form action="confirm.html" method="GET">
+            <div class="form-group">
+                <label for="utr">UTR/Transaction ID:</label>
+                <input type="text" id="utr" name="utr" required placeholder="Enter your UTR/Transaction ID">
+            </div>
+            <button type="submit" class="submit-btn">CONFIRM PAYMENT</button>
+        </form>
+    </div>
+</body>
+</html>
